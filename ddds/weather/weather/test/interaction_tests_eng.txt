@@ -1,0 +1,21 @@
+--- main menu
+S> Do you want to know the temperature or the current weather?
+
+-- 1st
+
+U> what is the temperature
+S> What city?
+U> London
+S> What country?
+U> UK
+S> It's * degrees celsius.
+
+-- 2nd
+U> what is the temperature in london uk?
+> It's * degrees celsius.
+
+
+-- 3nd
+
+U> how is the weather in london uk?
+S> *

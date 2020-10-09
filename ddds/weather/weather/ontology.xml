@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <ontology name="WeatherOntology">
+  
+  <sort name="city" dynamic="true"/>
+  <sort name="country" dynamic="true"/>
+
+  <predicate name="city_to_search" sort="city"/>
+  <predicate name="country_to_search" sort="country"/>
+  <predicate name="temperature" sort="string"/>
+  <predicate name="weather" sort="string"/>
+
+  <individual name="city_london" sort="city"/>
+  <individual name="city_paris" sort="city"/>
+  <individual name="country_uk" sort="country"/>
+  <individual name="country_france" sort="country"/>
+
+<!-- answers for predicates, the only slots they allow, is answers for the same predicate -->
+</ontology>
