@@ -1,8 +1,7 @@
 --- main menu
-S> Do you want to know the temperature or the current weather?
+S> Do you want to know the temperature or know the weather?
 
--- 1st
-
+--- incremental temp
 U> what is the temperature
 S> What city?
 U> London
@@ -10,12 +9,10 @@ S> What country?
 U> UK
 S> It's * degrees celsius.
 
--- 2nd
-U> what is the temperature in london uk?
-> It's * degrees celsius.
+--- one-shot temp
+U> what is the temperature in london uk
+S> It's * degrees celsius.
 
-
--- 3nd
-
-U> how is the weather in london uk?
-S> *
+--- one-shot weather
+U> how is the weather in london uk
+S> It's *.

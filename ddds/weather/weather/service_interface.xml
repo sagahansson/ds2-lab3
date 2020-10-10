@@ -2,8 +2,8 @@
 <service_interface>
   <query name="temperature">
     <parameters>
-      <parameter predicate="city" format="grammar_entry"/>
-      <parameter predicate="country" format="grammar_entry"/>
+      <parameter predicate="city_to_search" format="grammar_entry"/>
+      <parameter predicate="country_to_search" format="grammar_entry"/>
     </parameters>
     <target>
       <http endpoint="http://http-service/temperature"/>
@@ -12,8 +12,8 @@
 
   <query name="weather">
     <parameters>
-      <parameter predicate="city" format="grammar_entry"/>
-      <parameter predicate="country" format="grammar_entry"/>
+      <parameter predicate="city_to_search" format="grammar_entry"/>
+      <parameter predicate="country_to_search" format="grammar_entry"/>
     </parameters>
     <target>
       <http endpoint="http://http-service/weather"/>

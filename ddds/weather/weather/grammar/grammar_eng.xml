@@ -27,28 +27,29 @@
   <question speaker="user" predicate="temperature" type="wh_question">
     <one-of>
       <item>what is the temperature</item>
-      <item>what is the temperature in <slot predicate="city" type="individual"/></item>
-      <item>what is the temperature in <slot predicate="city" type="individual"/> <slot predicate="country" type="individual"/></item>
+      <item>what is the temperature in <slot predicate="city_to_search" type="individual"/></item>
+      <item>what is the temperature in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/></item>
     </one-of>
   </question>
 
   <question speaker="user" predicate="weather" type="wh_question">
     <one-of>
       <item>how is the weather</item>
-      <item>how is the weather in <slot predicate="city" type="individual"/></item>
-      <item>how is the weather in <slot predicate="city" type="individual"/> <slot predicate="country" type="individual"/></item>
+      <item>how is the weather in <slot predicate="city_to_search" type="individual"/></item>
+      <item>how is the weather in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/></item>
     </one-of>
   </question>
 
-  <question speaker="system" predicate="city_to_search" type="wh_question">Which city</question>
-  <question speaker="system" predicate="country_to_search" type="wh_question">Which country</question>
+  
+  <question speaker="system" predicate="country_to_search" type="wh_question">What country</question>
+  <question speaker="system" predicate="city_to_search" type="wh_question">What city</question>
   <question speaker="system" predicate="temperature" type="wh_question">the temperature</question>
   <question speaker="system" predicate="weather" type="wh_question">the weather</question>
 
 <!-- answers -->
 
   <answer speaker="system" predicate="temperature">It's<slot predicate="temperature"/>degrees celsius</answer>
-  <answer speaker="system" predicate="weather"><slot predicate="weather"/></answer>
+  <answer speaker="system" predicate="weather">It's<slot predicate="weather"/></answer>
 
 <!-- individuals -->
 
@@ -59,26 +60,30 @@
     </one-of>
   </individual>
 
-  <individual name="city_paris">
-    <one-of>
-      <item>Paris</item>
-      <item>paris</item>
-    </one-of>
-  </individual>
-
   <individual name="country_uk">
     <one-of>
       <item>UK</item>
       <item>uk</item>
     </one-of>
   </individual>
-  
+<!-- 
+  <individual name="city_paris">
+    <one-of>
+      <item>Paris</item>
+      <item>paris</item>
+    </one-of>
+  </individual>
+-->
+
+<!--
   <individual name="country_france">
     <one-of>
       <item>France</item>
       <item>france</item>
     </one-of>
   </individual>
-  
+  -->  
 
+
+<!-- answers for predicates, the only slots they allow, is answers for the same predicate -->
 </grammar>

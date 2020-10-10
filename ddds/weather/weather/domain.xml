@@ -17,16 +17,16 @@
 
   <goal type="resolve" question_type="wh_question" predicate="temperature">
     <plan>
-      <findout type="wh_question" predicate="country_to_search"/>
       <findout type="wh_question" predicate="city_to_search"/>
+      <findout type="wh_question" predicate="country_to_search"/>
       <invoke_service_query predicate="temperature" type="wh_question"/>
     </plan>
   </goal>
 
   <goal type="resolve" question_type="wh_question" predicate="weather">
     <plan>
-      <findout type="wh_question" predicate="country_to_search"/>
       <findout type="wh_question" predicate="city_to_search"/>
+      <findout type="wh_question" predicate="country_to_search"/>
       <invoke_service_query predicate="weather" type="wh_question"/>
     </plan>
   </goal>

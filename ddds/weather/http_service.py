@@ -4,6 +4,7 @@ import json
 
 from flask import Flask, request
 from jinja2 import Environment
+from urllib.request import Request, urlopen
 
 app = Flask(__name__)
 environment = Environment()
@@ -124,6 +125,7 @@ def action_success_response():
     return response
 
 def get_data(city,country, unit="metric"):
+    key = "c3a811e3b8a3dccbcf62027747927560"
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city},{country}&units={unit}&APPID={key}"
     print(url)
     request = Request(url)
@@ -135,6 +137,7 @@ def get_data(city,country, unit="metric"):
 @app.route("/temperature", methods=['POST'])
 def temperature():
     payload = request.get_json()
+    print(payload)
     city = payload["context"]["facts"]["city_to_search"]["grammar_entry"]
     country = payload["context"]["facts"]["country_to_search"]["grammar_entry"]
     data = get_data(city, country)
@@ -145,6 +148,7 @@ def temperature():
 @app.route("/weather", methods=['POST'])
 def weather():
     payload = request.get_json()
+    print(payload)
     city = payload["context"]["facts"]["city_to_search"]["grammar_entry"]
     country = payload["context"]["facts"]["country_to_search"]["grammar_entry"]
     data = get_data(city, country)
