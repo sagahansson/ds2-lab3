@@ -13,6 +13,14 @@ S> It's * degrees celsius.
 U> what is the temperature in london uk
 S> It's * degrees celsius.
 
+--- incremental weather
+U> how is the weather
+S> What city?
+U> London
+S> What country?
+U> UK
+S> It's *.
+
 --- one-shot weather
 U> how is the weather in london uk
 S> It's *.
