@@ -141,9 +141,22 @@ def temperature():
     print(f"temp payload: {payload}")
     city = payload["context"]["facts"]["city_to_search"]["grammar_entry"]
     country = payload["context"]["facts"]["country_to_search"]["grammar_entry"]
-    data = get_data(city, country)
+    if 'selected_unit' in payload['context']['facts'].keys():
+      unit = payload['context']['facts']['selected_unit']['value']
+      data = get_data(city, country, unit)
+      if unit == 'metric':
+        unit = 'Celsius'
+      elif unit == 'imperial':
+        unit = 'Fahrenheit'
+      else:
+        unit = 'kelvin'
+    else:
+      data = get_data(city, country)
+      unit = "Celsius"
     temp = data['main']['temp']
     tempstr = str(temp)
+    print(f"tempstr: {tempstr + ' ' + unit}")
+    tempstr = tempstr + ' degrees ' + unit
     return query_response(value=tempstr, grammar_entry=None)
 
 @app.route("/weather", methods=['POST'])
@@ -152,6 +165,7 @@ def weather():
     print(f"weather payload: {payload}")
     city = payload["context"]["facts"]["city_to_search"]["grammar_entry"]
     country = payload["context"]["facts"]["country_to_search"]["grammar_entry"]
+
     data = get_data(city, country)
     temp = data['weather'][0]['description']
     tempstr = str(temp)

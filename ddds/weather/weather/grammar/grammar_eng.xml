@@ -29,6 +29,15 @@
       <item>what is the temperature</item>
       <item>what is the temperature in <slot predicate="city_to_search" type="individual"/></item>
       <item>what is the temperature in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/></item>
+      <item>what is the temperature in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/> in <slot predicate="selected_unit" type="individual"/></item>
+      <item>how many degrees is it in <slot predicate="city_to_search" type="individual"/></item>
+      <item>how many degrees is it in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/></item>
+      <item>how many degrees is it in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/> in <slot predicate="selected_unit" type="individual"/></item>
+      <item>how warm is it</item>
+      <item>how warm is it in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/></item>
+      <item>temperature in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/> in <slot predicate="selected_unit" type="individual"/></item>
+      <item><slot predicate="city_to_search" type="individual"/> temperature in <slot predicate="selected_unit" type="individual"/></item>
+      <item>current temperature in <slot predicate="selected_unit" type="individual"/></item>
     </one-of>
   </question>
 
@@ -39,7 +48,6 @@
       <item>how is the weather in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/></item>
     </one-of>
   </question>
-
   
   <question speaker="system" predicate="country_to_search" type="wh_question">What country</question>
   <question speaker="system" predicate="city_to_search" type="wh_question">What city</question>
@@ -48,10 +56,10 @@
 
 <!-- answers -->
 
-  <answer speaker="system" predicate="temperature">It's<slot predicate="temperature"/>degrees celsius</answer>
+  <answer speaker="system" predicate="temperature">It's<slot predicate="temperature"/></answer>
   <answer speaker="system" predicate="weather">It's<slot predicate="weather"/></answer>
 
-<!-- individuals -->
+<!-- individuals: cities -->
 
   <individual name="city_london">
     <one-of>
@@ -59,6 +67,43 @@
       <item>london</item>
     </one-of>
   </individual>
+   
+  <individual name="city_paris">
+    <one-of>
+      <item>Paris</item>
+      <item>paris</item>
+    </one-of>
+  </individual>
+
+  <individual name="city_gothenburg">
+    <one-of>
+      <item>Gotenburg</item>
+      <item>gothenburg</item>
+    </one-of>
+  </individual>
+
+  <individual name="city_heraklion">
+    <one-of>
+      <item>Heraklion</item>
+      <item>heraklion</item>
+    </one-of>
+  </individual>
+
+  <individual name="city_cadiz">
+    <one-of>
+      <item>Cadiz</item>
+      <item>cadiz</item>
+    </one-of>
+  </individual>
+  
+  <individual name="city_toronto">
+    <one-of>
+      <item>Toronto</item>
+      <item>toronto</item>
+    </one-of>
+  </individual>
+  
+<!-- individuals: countries -->
 
   <individual name="country_uk">
     <one-of>
@@ -66,24 +111,63 @@
       <item>uk</item>
     </one-of>
   </individual>
-<!-- 
-  <individual name="city_paris">
-    <one-of>
-      <item>Paris</item>
-      <item>paris</item>
-    </one-of>
-  </individual>
--->
 
-<!--
   <individual name="country_france">
     <one-of>
       <item>France</item>
       <item>france</item>
     </one-of>
+  </individual>  
+
+  <individual name="country_sweden">
+    <one-of>
+      <item>Sweden</item>
+      <item>sweden</item>
+    </one-of>
+  </individual>  
+
+  <individual name="country_greece">
+    <one-of>
+      <item>Greece</item>
+      <item>greece</item>
+    </one-of>
   </individual>
-  -->  
 
+  <individual name="country_spain">
+    <one-of>
+      <item>Spain</item>
+      <item>spain</item>
+    </one-of>
+  </individual>
+  
+  <individual name="country_canada">
+    <one-of>
+      <item>Canada</item>
+      <item>canada</item>
+    </one-of>
+  </individual>
 
+<!-- individuals: units -->
+
+  <individual name="metric">
+    <one-of>
+      <item>celsius</item>
+      <item>metric</item>
+    </one-of>
+  </individual>
+
+  <individual name="standard">
+    <one-of>
+      <item>kelvin</item>
+      <item>standard</item>
+    </one-of>
+  </individual>
+
+  <individual name="imperial">
+    <one-of>
+      <item>fahrenheit</item>
+      <item>imperial</item>
+    </one-of>
+  </individual>
 <!-- answers for predicates, the only slots they allow, is answers for the same predicate -->
 </grammar>

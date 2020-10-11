@@ -19,6 +19,7 @@
     <plan>
       <findout type="wh_question" predicate="city_to_search"/>
       <findout type="wh_question" predicate="country_to_search"/>
+      <bind type="wh_question" predicate="selected_unit"/>
       <invoke_service_query predicate="temperature" type="wh_question"/>
     </plan>
   </goal>

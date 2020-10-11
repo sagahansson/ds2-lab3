@@ -3,15 +3,34 @@
   
   <sort name="city" dynamic="true"/>
   <sort name="country" dynamic="true"/>
+  <sort name="unit" dynamic="true"/>
 
   <predicate name="city_to_search" sort="city"/>
   <predicate name="country_to_search" sort="country"/>
   <predicate name="temperature" sort="string"/>
   <predicate name="weather" sort="string"/>
+  <predicate name="selected_unit" sort="unit"/>
 
+  <!-- indiciduals:cities-->
   <individual name="city_london" sort="city"/>
-  <!--<individual name="city_paris" sort="city"/>-->
+  <individual name="city_paris" sort="city"/>
+  <individual name="city_gothenburg" sort="city"/>
+  <individual name="city_heraklion" sort="city"/>
+  <individual name="city_cadiz" sort="city"/>
+  <individual name="city_toronto" sort="city"/>
+  
+  <!-- indiciduals:countries-->
   <individual name="country_uk" sort="country"/>
-  <!--<individual name="country_france" sort="country"/>-->
-
+  <individual name="country_france" sort="country"/>
+  <individual name="country_sweden" sort="country"/>
+  <individual name="country_greece" sort="country"/>
+  <individual name="country_spain" sort="country"/>
+  <individual name="country_canada" sort="country"/>
+  
+  <!-- indiciduals:units-->
+  <individual name="metric" sort="unit"/>
+  <!-- "standard" = kelvin -->
+  <individual name="standard" sort="unit"/>
+  <individual name="imperial" sort="unit"/>
+  
 </ontology>
