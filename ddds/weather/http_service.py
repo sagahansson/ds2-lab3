@@ -144,7 +144,7 @@ def temperature():
     if 'selected_unit' in payload['context']['facts'].keys():
       unit = payload['context']['facts']['selected_unit']['value']
       data = get_data(city, country, unit)
-      if unit == 'metric':
+      if unit == 'metric': # so it can say 30 Celsius
         unit = 'Celsius'
       elif unit == 'imperial':
         unit = 'Fahrenheit'
@@ -155,8 +155,7 @@ def temperature():
       unit = "Celsius"
     temp = data['main']['temp']
     tempstr = str(temp)
-    print(f"tempstr: {tempstr + ' ' + unit}")
-    tempstr = tempstr + ' degrees ' + unit
+    tempstr = tempstr + ' degrees ' + unit # so it can say "it's 5 degrees Celsius"
     return query_response(value=tempstr, grammar_entry=None)
 
 @app.route("/weather", methods=['POST'])

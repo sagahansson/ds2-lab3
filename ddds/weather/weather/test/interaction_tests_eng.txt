@@ -36,3 +36,74 @@ U> london
 S> What country?
 U> uk
 S> It's *.
+
+--- not in grammar
+U> weather in london please
+S> What country?
+U> uk
+S> It's *.
+
+--- not in grammar 2
+U> what is the temperature thanks
+S> What city?
+U> heraklion
+S> What country?
+U> greece
+S> It's *.
+
+--- spelling mistake
+U> temprature in uk
+S> What city?
+U> london
+S> It's *.
+
+--- spelling mistake 2
+U> wether 
+S> What city?
+U> cadiz
+S> What country?
+U> spain
+S> It's *.
+
+--- new city 
+U> weather in madrid spain
+S> It's *.
+
+--- new country + city
+U> what is the temperature in germany
+S> What city?
+U> berlin
+S> It's *.
+
+--- new weather
+U> is it snowing
+S> What city?
+U> helsinki
+S> What country?
+U> finland
+S> It's *.
+
+--- santiago
+U> weather
+S> What city?
+U> santiago
+S> What country?
+U> Chile
+S> It's *.
+
+--- santiago de Chile
+U> weather
+S> What city?
+U> santiago de chile
+S> It's *.
+
+--- changed mind
+S> What city?
+U> london
+S> What country?
+U> not london
+S> What city?
+U> liverpool
+S> What country?
+U> uk
+S> It's *.

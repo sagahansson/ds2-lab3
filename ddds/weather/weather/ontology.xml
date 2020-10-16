@@ -7,6 +7,7 @@
 
   <predicate name="city_to_search" sort="city"/>
   <predicate name="country_to_search" sort="country"/>
+  <!-- why do temp & weather need to be strings-->
   <predicate name="temperature" sort="string"/>
   <predicate name="weather" sort="string"/>
   <predicate name="selected_unit" sort="unit"/>

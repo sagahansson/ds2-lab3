@@ -34,18 +34,60 @@
       <item>how many degrees is it in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/></item>
       <item>how many degrees is it in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/> in <slot predicate="selected_unit" type="individual"/></item>
       <item>how warm is it</item>
+      <item>how warm is it in <slot predicate="city_to_search" type="individual"/></item>
+      <item>how warm is it in <slot predicate="country_to_search" type="individual"/></item>
       <item>how warm is it in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/></item>
+      <item>temperature in <slot predicate="selected_unit" type="individual"/></item>
+      <item>temperature in <slot predicate="country_to_search" type="individual"/></item>
+      <item>temperature in <slot predicate="city_to_search" type="individual"/></item>
+      <item>temperature in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/></item>
       <item>temperature in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/> in <slot predicate="selected_unit" type="individual"/></item>
       <item><slot predicate="city_to_search" type="individual"/> temperature in <slot predicate="selected_unit" type="individual"/></item>
+      <item><slot predicate="city_to_search" type="individual"/> temperature</item>
+      <item><slot predicate="country_to_search" type="individual"/> temperature</item>
+      <item>current temperature</item>
       <item>current temperature in <slot predicate="selected_unit" type="individual"/></item>
+      <item>current temperature in <slot predicate="city_to_search" type="individual"/></item>
+      <item>current temperature in <slot predicate="country_to_search" type="individual"/></item>
+      <item>current temperature in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/></item>
+      <item>current temperature in <slot predicate="city_to_search" type="individual"/> in <slot predicate="selected_unit" type="individual"/></item>
+      <item>temperature</item>
+      <item>tempratur</item>
+      <item>tamparatur</item>
+      <item>is it could tday</item>
+      <item>is it cold today in <slot predicate="country_to_search" type="individual"/></item>
+      <item>is it cold today in <slot predicate="city_to_search" type="individual"/></item>
+      <item>is it cold today in <slot predicate="city_to_search" type="individual"/><slot predicate="country_to_search" type="individual"/></item>
     </one-of>
   </question>
 
   <question speaker="user" predicate="weather" type="wh_question">
     <one-of>
+      <item>check wether</item>
+      <item>weather</item>
+      <item>wather in <slot predicate="city_to_search" type="individual"/></item>
+      <item>weather in <slot predicate="city_to_search" type="individual"/></item>
+      <item>weather in <slot predicate="country_to_search" type="individual"/></item>
+      <item>weather in <slot predicate="city_to_search" type="individual"/> in <slot predicate="country_to_search" type="individual"/></item>
+      <item>the current weather</item>
+      <item>the current weather in <slot predicate="city_to_search" type="individual"/></item>
+      <item>the current weather in <slot predicate="country_to_search" type="individual"/></item>
+      <item>the current weather in <slot predicate="city_to_search" type="individual"/><slot predicate="country_to_search" type="individual"/></item>
       <item>how is the weather</item>
       <item>how is the weather in <slot predicate="city_to_search" type="individual"/></item>
+      <item>how is the weather in <slot predicate="country_to_search" type="individual"/></item>
       <item>how is the weather in <slot predicate="city_to_search" type="individual"/> <slot predicate="country_to_search" type="individual"/></item>
+      <item>what's the weather like in <slot predicate="city_to_search" type="individual"/></item>
+      <item>what's the weather like in <slot predicate="country_to_search" type="individual"/></item>
+      <item>what's the weather like in <slot predicate="city_to_search" type="individual"/><slot predicate="country_to_search" type="individual"/></item>
+      <item>what's the weather like today</item>
+      <item>is it raining</item>
+      <item>is it sunny</item>
+      <item>is it windy today</item>
+      <item>rain <slot predicate="city_to_search" type="individual"/>today</item>
+      <item>is the weather nice today</item>
+      <item>tell me the weather</item>
+      <item>what is the weather</item>
     </one-of>
   </question>
   
