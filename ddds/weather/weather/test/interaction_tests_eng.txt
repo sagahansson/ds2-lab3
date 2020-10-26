@@ -51,14 +51,28 @@ S> What country?
 U> greece
 S> It's *.
 
---- spelling mistake
+--- spelling mistake working
+U> temperture in uk
+S> What city?
+U> london
+S> It's *.
+
+--- spelling mistake unexp excep ??
 U> temprature in uk
 S> What city?
 U> london
 S> It's *.
 
---- spelling mistake 2
+--- spelling mistake not understanding
 U> wether 
+S> What city?
+U> cadiz
+S> What country?
+U> spain
+S> It's *.
+
+--- spelling mistake working 2
+U> wethear 
 S> What city?
 U> cadiz
 S> What country?

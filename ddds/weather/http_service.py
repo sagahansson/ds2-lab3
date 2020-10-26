@@ -5,7 +5,7 @@ import json
 from flask import Flask, request
 from jinja2 import Environment
 from urllib.request import Request, urlopen
-from sagakey import key as sagakey # just keeps my key secret :))
+key = "c3a811e3b8a3dccbcf62027747927560"
 
 app = Flask(__name__)
 environment = Environment()
@@ -126,7 +126,6 @@ def action_success_response():
     return response
 
 def get_data(city,country, unit="metric"):
-    key = sagakey
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city},{country}&units={unit}&APPID={key}"
     print(url)
     request = Request(url)
